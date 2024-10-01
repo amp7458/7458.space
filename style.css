@@ -1,0 +1,41 @@
+body {
+    font-family: monospace;
+    margin-left: 20px;
+    padding: 6px;
+    color:white;
+    background-color: black;
+    display: flex;
+}
+h1, h2, h3 {
+    color: #31aa33;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    background-color: black;
+    color: white;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding-left: 40px;
+    padding-bottom: 10px;
+    width: 70%;
+}
+
+.main-content {
+    /* margin-left: 270px; */
+    /* Sidebar width + some padding */
+    padding: 30px;
+    width: calc(100% - 270px);
+}
+a {
+    color:#31aa33;
+    text-decoration: none;
+}
