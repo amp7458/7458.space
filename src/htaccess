@@ -1,0 +1,4 @@
+Options +Indexes
+IndexOptions FancyIndexing SuppressHTMLPreamble SuppressRules
+HeaderName /src/.header.html
+ReadmeName /src/.footer.html
