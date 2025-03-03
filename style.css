@@ -2,10 +2,11 @@ body {
     font-family: monospace;
     margin-left: 20px;
     padding: 6px;
-    color:white;
-    background-color: black;
-    display: flex;
+    color: white;
+    background: url("./keyboard.jpg");
+    display: flex; /* Keep flex for the sidebar */
 }
+
 h1, h2, h3 {
     color: #31aa33;
 }
@@ -18,6 +19,7 @@ h1, h2, h3 {
     background-color: black;
     color: white;
 }
+
 .sidebar ul li a {
     color: white;
     text-decoration: none;
@@ -30,12 +32,56 @@ section {
 }
 
 .main-content {
-    /* margin-left: 270px; */
-    /* Sidebar width + some padding */
     padding: 30px;
-    width: calc(100% - 270px);
+    /* Center on larger screens */
+    margin: 0 auto; /* Auto margins for centering */
+    max-width: 800px; /* Adjust as needed */
+    background: rgb(0,0,0,.7);
+    backdrop-filter: blur(7px);
 }
+
+.projects-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between projects */
+    gap: 10px; /* Add a gap (margin) between projects */
+    width: 90%; /* Make sure the container takes full width if needed */
+}
+
+.project {
+    padding: 10px;
+    background: rgb(0, 0, 0, 0.7);
+    border: 1px solid #ffffff2f;
+    width: 45%; /* Keep the width as it is */
+    border-radius: 8px;
+}
+
 a {
-    color:#31aa33;
+    color: #31aa33;
     text-decoration: none;
+}
+
+/* Media query for mobile (screens smaller than 768px, adjust as needed) */
+@media (max-width: 768px) {
+    body {
+        display: block; /* Switch to block display for mobile */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .sidebar {
+        position: static; /* Remove fixed positioning */
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    section {
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .main-content {
+        margin: 0; /* Remove margins */
+        padding: 15px; /* Adjust padding for mobile */
+        max-width: none; /* Remove max width */
+    }
 }
