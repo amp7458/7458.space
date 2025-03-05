@@ -1,12 +1,11 @@
 body {
     font-family: monospace;
-    font-size: 12px;
     line-height: 16px;
     margin-left: 20px;
     padding: 6px;
     color: white;
     background: url("./keyboard.jpg");
-    display: flex; /* Keep flex for the sidebar */
+    display: flex;
 }
 
 h1, h2, h3 {
@@ -35,25 +34,24 @@ section {
 
 .main-content {
     padding: 30px;
-    /* Center on larger screens */
-    margin: 0 auto; /* Auto margins for centering */
-    max-width: 800px; /* Adjust as needed */
-    background: rgb(0,0,0,.7);
+    margin: 0 auto;
+    max-width: 800px;
+    background: rgb(0,0,0,.6);
     backdrop-filter: blur(7px);
 }
 
 .projects-container {
     display: flex;
-    justify-content: space-between; /* Distribute space evenly between projects */
-    gap: 10px; /* Add a gap (margin) between projects */
-    width: 90%; /* Make sure the container takes full width if needed */
+    justify-content: space-between;
+    gap: 10px;
+    width: 90%;
 }
 
 .project {
     padding: 10px;
-    background: rgb(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0, 0.6);
     border: 1px solid #ffffff2f;
-    width: 45%; /* Keep the width as it is */
+    width: 45%;
     border-radius: 8px;
 }
 
@@ -62,18 +60,17 @@ a {
     text-decoration: none;
 }
 
-/* Media query for mobile (screens smaller than 768px, adjust as needed) */
 @media (max-width: 768px) {
     body {
-        display: block; /* Switch to block display for mobile */
-        margin-left: 0; /* Remove left margin */
+        display: block;
+        margin-left: 0;
     }
 
     .sidebar {
-        position: static; /* Remove fixed positioning */
-        width: 100%; /* Full width */
-        height: auto; /* Auto height */
-        padding: 10px; /* Reduce padding for mobile */
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
     }
 
     section {
@@ -82,8 +79,18 @@ a {
     }
 
     .main-content {
-        margin: 0; /* Remove margins */
-        padding: 15px; /* Adjust padding for mobile */
-        max-width: none; /* Remove max width */
+        margin: 0;
+        padding: 15px;
+        max-width: none;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
