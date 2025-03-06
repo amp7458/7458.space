@@ -5,6 +5,7 @@ body {
     padding: 6px;
     color: white;
     background: url("./keyboard.jpg");
+    background-color: #161616;
     display: flex;
 }
 
